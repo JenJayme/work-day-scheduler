@@ -32,7 +32,6 @@ $(document).ready(function(){
 
     //use Bootstrap to create a grid for the day with 9 rows and 3 columns in HTML.
 
-
     //To color code the timeblocks, we'll need a var of currentTime, which will constantly update to the time returned by moment() method.  
     var currentTime;
 
@@ -42,20 +41,83 @@ $(document).ready(function(){
     };
 
     updateTime();
+    console.log(currentTime);
 
-    //Each timeblock will have a value.
+    //Create an array of objects for time blocks with start times, end times and color codes.
 
-    //The results of this comparison will affect a var pastPresentFuture which toggles past, present, future to indicate when the background color style of a div needs to be changed.   
-    var pastPresentFuture;
+    var timeBlockArr = [
+        {
+            startHr: 9,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 10,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 11,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 12,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 1,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 2,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 3,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 4,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        },{
+            startHr: 5,
+            startMin: 00,
+            startSec: 00,
+            colorCode: ""
+        }];
 
-    //We can use an addClass jQuery statement embedded in an if else if else function.  if (currentTime < )
-0.
+    function compareTime(time1,time2) {		
+		var timeNowParsed=Date.parse('20 Aug 2000 '+currentTime);
+        var timeBlockParsed=Date.parse('20 Aug 2000 '+timeBlockParsed.startHr);
+    };
+
+    console.log(timeNowParsed + timeBlockParsed);
+
+    //The results of this comparison will affect a var colorCode which toggles past, present, future to indicate when the background color style of a div needs to be changed. 
+    var colorCode = past;
+
+    //Use .addClass jQuery statement embedded in an if else if else function. 
+    function setColor() {
+        if (colorCode === past) {
+        // if (currentTime < timeBlockValue) {
+            $("col-sm-8").addClass("past");
+        } else if (currentTime === timeBlockValue) {
+                colorCode = present 
+        } else {
+                colorCode = future 
+        }
+    };
+
     // To enter an event upon clicking into a timeblock, we'll need to create a text input element.
     var input = document.createElement("INPUT");
     input.setAttribute("type", "text");
 
-
-
     setInterval(updateTime, 1000);
-
 });
