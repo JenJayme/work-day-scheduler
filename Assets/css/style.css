@@ -18,6 +18,11 @@ textarea{
   border-bottom: solid 1px darkgray;
 }
 
+.lead {
+  font-size: 20px;
+  font-style: bold;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;

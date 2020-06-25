@@ -25,7 +25,9 @@ $(document).ready(function(){
 
     //Point that today var to the place on the index.html where we want today's date to appear.
     // var today = $("#currentDay");
-    today = document.querySelector("#currentDay");
+    // today = document.querySelector("#currentDay");
+    $("#currentDay").addClass("lead");
+    $("#currentDay").append(today);
     // $(#currentDay).html(today);
 
     //use Bootstrap to create a grid for the day with 9 rows and 3 columns in HTML.
