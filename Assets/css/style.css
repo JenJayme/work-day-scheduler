@@ -15,7 +15,7 @@ textarea{
 
 .container{
   margin: 30px;
-  border: thin 1px red;
+  border-bottom: solid 1px darkgray;
 }
 
 .jumbotron {

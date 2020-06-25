@@ -18,11 +18,14 @@ console.log("testing");
 $(document).ready(function(){
 
     //Use the moment() method from Moment.js to return the current day to a var today.
-    var today = $("#date-formatted").text(moment().format());
+    console.log(moment().format('MMMM DD YYYY'));
+    var today = (moment().format('MMMM DD YYYY'));
+    console.log(today);
+
 
     //Point that today var to the place on the index.html where we want today's date to appear.
-    var today = $("#currentDay");
-    // today = document.querySelector("#currentDay");
+    // var today = $("#currentDay");
+    today = document.querySelector("#currentDay");
     // $(#currentDay).html(today);
 
     //use Bootstrap to create a grid for the day with 9 rows and 3 columns in HTML.
@@ -35,6 +38,8 @@ $(document).ready(function(){
         let currentTime = moment().format('h:mm:ss')
         $("#time").text(currentTime)
     };
+
+    updateTime();
 
     //Each timeblock will have a value.
 
