@@ -25,7 +25,7 @@ $(document).ready(function(){
     // today = document.querySelector("#currentDay");
     // $(#currentDay).html(today);
 
-    //use Bootstrap to create a grid for the day with 9 rows and 3 columns.
+    //use Bootstrap to create a grid for the day with 9 rows and 3 columns in HTML.
 
 
     //To color code the timeblocks, we'll need a var of currentTime, which will constantly update to the time returned by moment() method.  
@@ -37,7 +37,7 @@ $(document).ready(function(){
     };
 
     //Each timeblock will have a value.
-    
+
     //The results of this comparison will affect a var pastPresentFuture which toggles past, present, future to indicate when the background color style of a div needs to be changed.   
     var pastPresentFuture;
 
